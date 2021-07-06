@@ -10,12 +10,12 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-        }
-        // useContentSize: false, // 禁止最大化
-        // resizable: false // 禁止调整大小
+        },
+        useContentSize: false, // 禁止最大化
+        resizable: false // 禁止调整大小
     })
     // 打开调试
-    bw.webContents.openDevTools()
+    // bw.webContents.openDevTools()
     bw.loadFile("index.html")
 }
 

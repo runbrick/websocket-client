@@ -4,11 +4,31 @@
   "description": "websocket client ",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder --win --x64",
+    "dist_mac": "electron-builder --mac"
   },
   "author": "runbrick",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^13.1.5"
+    "electron": "^13.1.5",
+    "electron-builder": "^22.11.7"
+  },
+  "build": {
+    "productName": "WebSocket 测试客户端",
+    "asar": true,
+    "appId": "com.runbrick.websocket_client",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
   }
 }
