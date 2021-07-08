@@ -11,7 +11,6 @@ function createWindow() {
             nodeIntegration: true,
             contextIsolation: false,
         },
-        useContentSize: false, // 禁止最大化
         resizable: false // 禁止调整大小
     })
     // 打开调试
